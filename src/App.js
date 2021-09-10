@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import Student from './Student';
-import Score from './Score';
+import './App.css';
+//import Score from './Score';
 
 const App = () => {
 	const [studentData, setStudentData] = useState({
@@ -51,19 +52,10 @@ const App = () => {
     }]
   })
   return (
-    <div>
-    {studentData.students.map((student)=>{
-    return (
-
-     <div>
-     <Student student={student}/>
-     
-     </div>
-     
-         //<Score date={e.scores.date} score={e.scores.score}/>
-     );
-  })}
-  </div>
+    <div> 
+    <h1>Student Info: </h1>
+      <Student studentData={studentData}/>
+    </div>
   )
 };
 export default App;

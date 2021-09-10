@@ -2,15 +2,21 @@ import React from 'react';
 import Score from './Score';
 
 const Student = (props) => {
-    
     return (
         <div>
-        <h2>Student Name: {props.student.name}</h2>
-        <h3>Student Bio: {props.student.bio}</h3>
-        <Score apple={props.student.scores}/> 
+            {props.studentData.students.map((e)=>{
+       return (
+
+        <div>
+            <h2>Student Name: <span>{e.name}</span></h2>
+            <h3>Student Bio: <span>{e.bio}</span></h3>
+            <Score scores ={e.scores}/>
         </div>
-        //<Score scores={props.score}/>  
-    );   
+        );
+     })}
+
+        </div>
+    );
 };
 
-export default Student;
+export default Student; 
