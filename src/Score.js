@@ -1,9 +1,9 @@
 import React from 'react';
-
-const Score = (props) => {
+// instead of: const Score =(props)=>{} just do ({scores})
+const Score = ({scores}) => {
     return (
         <div>
-        {props.scores.map((e)=>{
+        {scores.map((e)=>{
             return (
                 <div>
                 <h4>Student Scores:</h4>

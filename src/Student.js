@@ -1,10 +1,10 @@
 import React from 'react';
 import Score from './Score';
-
-const Student = (props) => {
+// instead of (props) use {name_props}
+const Student = ({studentData}) => {
     return (
         <div>
-            {props.studentData.students.map((e)=>{
+            {studentData.students.map((e)=>{
        return (
 
         <div>
